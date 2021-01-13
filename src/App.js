@@ -21,11 +21,12 @@ componentDidMount(){
   render()
   {
   const {monsters,searchfield} = this.state;
-  const filteredMonsters=monsters.filter(monsters => 
-    monsters.name.toLowerCase().includes(searchfield.toLowerCase()));
+  const filteredMonsters=monsters.filter(monster => 
+    monster.name.toLowerCase().includes(searchfield.toLowerCase()));
     return(
       
       <div className="App">
+      <h1>Monsters Rolodex</h1>
         <SearchBox
         placeholder="search monsters"
         handleChange={e => this.setState({searchfield:e.target.value})}
